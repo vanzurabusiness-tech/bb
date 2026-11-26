@@ -35,31 +35,63 @@
   .offer-status span{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:999px;padding:5px 12px}
   .live-dot{width:8px;height:8px;border-radius:50%;background:#3ccf73;box-shadow:0 0 0 3px rgba(60,207,115,.2)}
 
-  .promotion-card{display:block;text-decoration:none;background:var(--card);border-radius:20px;
-    overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,.45);transition:transform .15s ease; border: 2px solid #fff;}
+  /* KARTA PRODUKTU */
+  .promotion-card{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    background: var(--card);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 14px 40px rgba(0,0,0,.45);
+    transition: transform .15s ease;
+    border: 2px solid #fff;
+    width: 100%;
+  }
   .promotion-card:hover{transform:translateY(-2px)}
   
+  /* OBRÁZEK - ZDE JE OPRAVA */
+  .image-wrapper {
+    width: 100%;
+    /* Pevný poměr stran 3:2 (nebo 16:9, jak je na obrázku) */
+    aspect-ratio: 3 / 2; 
+    overflow: hidden;
+    background: #0046be;
+    border-bottom: 4px solid var(--bg); /* Modrý pruh mezi fotkou a textem jako na screenu */
+  }
+
   .promotion-image {
     display: block;
     width: 100%;
-    height: 100%;          /* Změněno z auto na 100% */
-    aspect-ratio: 3/2;     /* Zachová poměr stran boxu */
-    object-fit: cover;     /* TOTO JE TO KLÍČOVÉ - vyplní to celý box */
-    background: #0046be; 
-    border-radius: 0;      /* Pro jistotu, aby to sedlo do hran */
-}
+    height: 100%;          /* Vyplní celý wrapper */
+    object-fit: cover;     /* Ořízne přebytek, vyplní celý box */
+    object-position: center; /* Vycentruje obrázek */
   }
   
-  .promotion-copy{padding:18px 18px 20px;text-align:center}
+  /* TEXT POD OBRÁZKEM */
+  .promotion-copy{
+    padding: 24px 20px 20px; /* Větší horní padding pro odsazení od modrého pruhu */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
   .promotion-copy h2{font-family:"Bree Serif",serif;font-weight:400;font-size:26px;line-height:1.2}
-  .offer-description{margin-top:6px;font-size:16px;color:var(--muted);font-weight:600}
-  .offer-disclaimer{margin-top:6px;font-size:12px;color:var(--muted)}
-  .continue-button{margin-top:16px;display:flex;align-items:center;justify-content:center;gap:10px;
+  .offer-description{font-size:16px;color:var(--muted);font-weight:600}
+  .offer-disclaimer{font-size:12px;color:var(--muted); margin-bottom: 8px;}
+  
+  .continue-button{
+    display:flex;align-items:center;justify-content:center;gap:10px;
     background:var(--red);color:#fff;font-weight:900;font-size:18px;letter-spacing:1px;
-    padding:16px 20px;border-radius:14px;box-shadow:0 6px 0 var(--red-dark)}
+    padding:16px 20px;border-radius:14px;box-shadow:0 6px 0 var(--red-dark);
+    margin: 0 20px 20px 20px; /* Přidán margin, aby tlačítko nebylo nalepené na okrajích */
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s;
+  }
   .promotion-card:active .continue-button{transform:translateY(3px);box-shadow:0 3px 0 var(--red-dark)}
   .continue-button svg{width:22px;height:22px}
 
+  /* ZBYTEK STRÁNKY */
   .how-it-works{margin-top:30px}
   .how-it-works h2{font-weight:900;font-size:clamp(22px,6.4vw,28px);display:flex;align-items:center;gap:8px; color: #fff;}
   .how-it-works h2 svg{width:1em;height:1em;color:var(--gold)}
@@ -93,18 +125,22 @@
 
   <a class="promotion-card" href="https://linkthem.net/?offer_id=5369&amp;aff_id=167172" rel="sponsored noopener">
     
-    <!-- TADY JE TA ZMĚNA: Cesta k tvé fotce -->
-    <img class="promotion-image" 
-         src="bestbuy-giftcard.png" 
-         alt="$750 Best Buy Gift Card">
+    <!-- Obal na obrázek, který drží poměr stran a zabraňuje přetečení -->
+    <div class="image-wrapper">
+        <img class="promotion-image" 
+             src="bestbuy-giftcard.png" 
+             alt="$750 Best Buy Gift Card">
+    </div>
 
     <div class="promotion-copy">
       <h2>$750 Best Buy Gift Card</h2>
       <p class="offer-description">Earn a Best Buy gift card worth $750</p>
       <p class="offer-disclaimer">Participation required. Terms and eligibility requirements apply.</p>
-      <span class="continue-button">CONTINUE
+    </div>
+    
+    <!-- Tlačítko je nyní mimo textový blok, aby mělo správné okraje -->
+    <div class="continue-button">CONTINUE
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-      </span>
     </div>
   </a>
 
