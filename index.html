@@ -23,13 +23,15 @@
   }
   *{box-sizing:border-box;margin:0;padding:0}
   
+  /* OPRAVA: Odstraněno overflow: hidden a height: 100%, nyní se dá scrollovat */
   html, body {
-    height: 100%;
-    overflow: hidden; 
+    min-height: 100%;
     background: radial-gradient(120% 60% at 50% 0%, var(--bg2) 0%, var(--bg) 60%) no-repeat, var(--bg);
+    background-attachment: fixed; /* Pozadí zůstane na místě při scrollování */
     font-family: "Nunito Sans", system-ui, sans-serif;
     color: var(--text);
     line-height: 1.3;
+    -webkit-text-size-adjust: 100%;
   }
   a{color:inherit; text-decoration: none;}
   
@@ -39,7 +41,7 @@
     min-height: 100vh;
     max-width: 560px;
     margin: 0 auto;
-    padding: 16px 16px 20px;
+    padding: 16px 16px 32px; /* Přidán větší spodní padding pro jistotu */
     justify-content: flex-start; 
     gap: 16px; 
   }
@@ -107,7 +109,6 @@
     object-position: center;
   }
   
-  /* ZDE JE ÚPRAVA - text je vycentrovaný, mezera dole je pryč */
   .promotion-copy{
     padding: 20px 16px;
     text-align: center;
@@ -162,6 +163,7 @@
     font-size: 11px;
     color: #b3d4f0;
     padding-top: 4px;
+    padding-bottom: 20px; /* Přidán padding, aby šel text hezky doostředit */
   }
   .campaign-footer nav{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 12px;}
   .campaign-footer nav a{text-decoration:underline; color: #fff;}
@@ -190,7 +192,6 @@
     <div class="promotion-copy">
       <h2>$750 Sam's Club Gift Card</h2>
       <p class="offer-description">Earn a Sam's Club gift card worth $750</p>
-      <!-- Text s participation required je smazán -->
     </div>
     
     <div class="continue-button">CONTINUE
