@@ -3,23 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>$750 Best Buy Gift Card | Holiday Promotion</title>
-<meta name="theme-color" content="#0046be">
+<title>$750 Sam's Club Gift Card | Holiday Promotion</title>
+<meta name="theme-color" content="#0067b8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #0046be;
-    --bg2: #003399;
-    --card: #ffffff;
-    --line: #cce0ff;
-    --icon-bg: #e6f0ff;
-    --gold: #ffcc00;
-    --red: #c8323a;
+    /* Sam's Club barvy */
+    --bg: #0067b8;       /* Hlavní Sam's Club modrá */
+    --bg2: #004c8c;      /* Tmavší modrá pro přechod */
+    --card: #ffffff;     /* Bílá karta */
+    --line: #b3d4f0;     /* Světle modrý okraj */
+    --icon-bg: #e6f0fa;  /* Světle modré pozadí ikon */
+    --gold: #ffcc00;     /* Žlutá pro akcenty */
+    --red: #c8323a;      /* Červené tlačítko (necháno pro kontrast) */
     --red-dark: #8f1f26;
-    --text: #002d80;
-    --muted: #4a6b9a;
+    --text: #003366;     /* Tmavě modrý text */
+    --muted: #557a99;    /* Šedomodrý text */
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{background:var(--bg)}
@@ -31,7 +32,7 @@
   .campaign-header{text-align:center;margin:6px 0 18px; color: #fff;}
   .campaign-header h1{font-family:"Bree Serif",serif;font-weight:400;font-size:30px;line-height:1.15}
   .campaign-header h1 span{color:var(--gold);letter-spacing:.5px}
-  .offer-status{display:flex;justify-content:center;gap:10px;margin-top:12px;font-size:13px;font-weight:700;color:#e6f0ff}
+  .offer-status{display:flex;justify-content:center;gap:10px;margin-top:12px;font-size:13px;font-weight:700;color:#e6f0fa}
   .offer-status span{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:999px;padding:5px 12px}
   .live-dot{width:8px;height:8px;border-radius:50%;background:#3ccf73;box-shadow:0 0 0 3px rgba(60,207,115,.2)}
 
@@ -50,27 +51,26 @@
   }
   .promotion-card:hover{transform:translateY(-2px)}
   
-  /* OBRÁZEK - ZDE JE OPRAVA */
+  /* OBRÁZEK */
   .image-wrapper {
     width: 100%;
-    /* Pevný poměr stran 3:2 (nebo 16:9, jak je na obrázku) */
     aspect-ratio: 3 / 2; 
     overflow: hidden;
-    background: #0046be;
-    border-bottom: 4px solid var(--bg); /* Modrý pruh mezi fotkou a textem jako na screenu */
+    background: #0067b8;
+    border-bottom: 4px solid var(--bg); 
   }
 
   .promotion-image {
     display: block;
     width: 100%;
-    height: 100%;          /* Vyplní celý wrapper */
-    object-fit: cover;     /* Ořízne přebytek, vyplní celý box */
-    object-position: center; /* Vycentruje obrázek */
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
   
   /* TEXT POD OBRÁZKEM */
   .promotion-copy{
-    padding: 24px 20px 20px; /* Větší horní padding pro odsazení od modrého pruhu */
+    padding: 24px 20px 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -84,7 +84,7 @@
     display:flex;align-items:center;justify-content:center;gap:10px;
     background:var(--red);color:#fff;font-weight:900;font-size:18px;letter-spacing:1px;
     padding:16px 20px;border-radius:14px;box-shadow:0 6px 0 var(--red-dark);
-    margin: 0 20px 20px 20px; /* Přidán margin, aby tlačítko nebylo nalepené na okrajích */
+    margin: 0 20px 20px 20px;
     cursor: pointer;
     transition: transform 0.1s, box-shadow 0.1s;
   }
@@ -106,7 +106,7 @@
   .step-copy p{margin-top:4px;font-size:clamp(12px,3.6vw,15px);color:var(--muted)}
   .step-number{flex:0 0 30px;height:30px;border-radius:50%;background:var(--bg);color:#fff;font-weight:900;font-size:15px;display:grid;place-items:center}
 
-  .campaign-footer{margin-top:28px;text-align:center;font-size:12px;color:#cce0ff}
+  .campaign-footer{margin-top:28px;text-align:center;font-size:12px;color:#b3d4f0}
   .campaign-footer nav{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 16px;margin-bottom:10px}
   .campaign-footer nav a{text-decoration:underline; color: #fff;}
   .campaign-footer p{max-width:480px;margin:6px auto 0}
@@ -123,22 +123,22 @@
     </div>
   </header>
 
-  <a class="promotion-card" href="https://linkthem.net/?offer_id=5369&amp;aff_id=167172" rel="sponsored noopener">
+  <!-- Změněný odkaz na tvůj nový affiliate link -->
+  <a class="promotion-card" href="https://giftclick.org/?offer_id=4592&amp;aff_id=167172" rel="sponsored noopener">
     
-    <!-- Obal na obrázek, který drží poměr stran a zabraňuje přetečení -->
     <div class="image-wrapper">
+        <!-- Změněný název souboru na samsgift.jpg -->
         <img class="promotion-image" 
-             src="bestbuy-giftcard.png" 
-             alt="$750 Best Buy Gift Card">
+             src="samsgift.jpg" 
+             alt="$750 Sam's Club Gift Card">
     </div>
 
     <div class="promotion-copy">
-      <h2>$750 Best Buy Gift Card</h2>
-      <p class="offer-description">Earn a Best Buy gift card worth $750</p>
+      <h2>$750 Sam's Club Gift Card</h2>
+      <p class="offer-description">Earn a Sam's Club gift card worth $750</p>
       <p class="offer-disclaimer">Participation required. Terms and eligibility requirements apply.</p>
     </div>
     
-    <!-- Tlačítko je nyní mimo textový blok, aby mělo správné okraje -->
     <div class="continue-button">CONTINUE
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
     </div>
@@ -173,7 +173,7 @@
       <a href="legal.html#terms">Terms</a>
       <a href="legal.html#disclosure">Affiliate Disclosure</a>
     </nav>
-    <p>This is an independent promotion by a third-party rewards program. Best Buy is not a sponsor of and is not affiliated with this promotion. US residents 18+ only. Rewards require completing the program's qualifying deals within the stated time, plus identity verification. We may earn a commission from links on this page.</p>
+    <p>This is an independent promotion by a third-party rewards program. Sam's Club is not a sponsor of and is not affiliated with this promotion. US residents 18+ only. Rewards require completing the program's qualifying deals within the stated time, plus identity verification. We may earn a commission from links on this page.</p>
   </footer>
 
 </main>
